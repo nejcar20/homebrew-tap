@@ -2,8 +2,7 @@ cask "yowl" do
   version "1.3.1"
   sha256 "0477f6fa3f6cbb832d3df6bb4005e767b35a7345a2bb24ed99ac9df98470120b"
 
-  url "https://github.com/nejcar20/yowl/releases/download/v#{version}/Yowl-#{version}.dmg",
-      verified: "github.com/nejcar20/yowl/"
+  url "https://github.com/nejcar20/yowl/releases/download/v#{version}/Yowl-#{version}.dmg"
   name "Yowl"
   desc "Menu bar theft alarm for MacBooks"
   homepage "https://dontstealmylaptop.com/"
@@ -13,7 +12,7 @@ cask "yowl" do
     strategy :github_latest
   end
 
-  depends_on macos: ">= :sonoma"
+  depends_on macos: :sonoma
 
   app "Yowl.app"
 
@@ -25,9 +24,9 @@ cask "yowl" do
   # silently editing /etc/sudoers.d is worse than leaving one line behind.
   # Unticking the setting inside the app removes it properly.
   zap trash: [
-    "~/Library/Preferences/com.jernejkocica.yowl.plist",
     "~/Library/Application Support/Yowl",
     "~/Library/Caches/com.jernejkocica.yowl",
+    "~/Library/Preferences/com.jernejkocica.yowl.plist",
   ]
 
   caveats <<~EOS
