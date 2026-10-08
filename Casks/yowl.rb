@@ -1,6 +1,6 @@
 cask "yowl" do
-  version "1.3.1"
-  sha256 "0477f6fa3f6cbb832d3df6bb4005e767b35a7345a2bb24ed99ac9df98470120b"
+  version "1.3.2"
+  sha256 "ad3a817bfa1312eb5ba8e7d2512db2e61eecb9e12985358beb7e9acfb54146fb"
 
   url "https://github.com/nejcar20/yowl/releases/download/v#{version}/Yowl-#{version}.dmg"
   name "Yowl"
